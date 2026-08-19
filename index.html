@@ -99,9 +99,10 @@
 </head>
 <body>
 <div class="container" id="app">
-    <!-- 隐藏的背景音乐播放器（公网无版权占位音乐，您可以随时更换链接） -->
+    <!-- ★★★ 隐藏的背景音乐播放器（已替换为超级轻柔的钢琴纯音乐） ★★★ -->
     <audio id="bgmAudio" loop style="display:none;">
-       <source src="https://cdn.pixabay.com/download/audio/2022/02/21/audio_996e13365a.mp3?filename=beautiful-piano-music-98390.mp3" type="audio/mpeg">
+        <source src="https://cdn.pixabay.com/download/audio/2022/02/21/audio_996e13365a.mp3?filename=beautiful-piano-music-98390.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- 语言切换按钮 -->
     <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()">🇬🇧 EN</button>
@@ -253,7 +254,7 @@ function applyLanguage() {
 }
 
 // ============================================================
-// 2. 题目数据 (中英双语，由您提供中文，我为您翻译成英文)
+// 2. 题目数据 (中英双语)
 // ============================================================
 const questions = [{
     id:1,
@@ -399,8 +400,8 @@ userNameInput.addEventListener('keydown', function(e) {
 function startQuiz() {
     namePage.style.display = 'none';
     quizPage.style.display = 'block';
-    // 播放背景音乐（音量调小至 20%）
-    bgmAudio.volume = 0.2;
+    // 播放背景音乐（音量调小至 15%，更轻柔）
+    bgmAudio.volume = 0.15;
     bgmAudio.play().catch(e => console.log("音频自动播放被浏览器拦截，需用户交互后才会播放"));
     renderAll();
 }
